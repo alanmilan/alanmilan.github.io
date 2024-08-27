@@ -322,15 +322,15 @@ html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 10px;
     overflow: hidden;
-    width: calc(20% - 10px); /* Ajuste conforme necessário */
-    max-width: 400px; /* Limita o tamanho máximo do item */
+    width: calc(20% - 10px); 
+    max-width: 400px; 
     text-align: center;
 }
 
 .project-item img.project-img {
     width: 100%;
     height: auto;
-    display: block;
+    display: center;
 }
 
 .project-description {
