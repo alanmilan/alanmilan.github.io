@@ -303,3 +303,50 @@ html {
 .footer p {
     margin: 0;
 }
+
+#projects .section-content img {
+    width: 50%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#projects .text-content h2 {
+    font-size: 4rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+#projects .text-content p {
+    font-size: 2.6rem;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.project-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+}
+
+.project-description h3 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+}
+
+.project-description p {
+    font-size: 1.6rem;
+    color: white;
+}
