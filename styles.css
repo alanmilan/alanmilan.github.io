@@ -323,8 +323,10 @@ html {
     margin: 10px;
     overflow: hidden;
     width: calc(20% - 10px); 
-    max-width: 400px; 
+    max-width: 300px; 
     text-align: center;
+    color: #b74b4b;
+    font-size: 2.5em;
 }
 
 .project-item img.project-img {
@@ -342,7 +344,7 @@ html {
 }
 
 .project-description p {
-    color: #b74b4b;
+    color: #ffffff;
 }
     
 @media (max-width: 768px) {
