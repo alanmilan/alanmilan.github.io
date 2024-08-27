@@ -323,7 +323,7 @@ html {
     margin: 10px;
     overflow: hidden;
     width: calc(20% - 10px); 
-    max-width: 300px; 
+    max-width: 400px; 
     text-align: center;
 }
 
@@ -344,8 +344,7 @@ html {
 .project-description p {
     color: #b74b4b;
 }
-
-/* Responsividade */
+    
 @media (max-width: 768px) {
     .project-item {
         width: calc(100% - 20px);
