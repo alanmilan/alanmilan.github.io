@@ -12,13 +12,15 @@
     <header>
         <a href="#" class="logo">Alan</a>
         <nav>
-            <a href="#" class="active" target="_blank">Home</a>
-            <a href="#services" target="_blank">Serviços</a>
-            <a href="#skills" target="_blank">Skills</a>
-            <a href="#projects" target="_blank">Projetos</a>
-            <a href="#contact" target="_blank">Contato</a>
+            <a href="#" class="active">Home</a>
+            <a href="#services">Serviços</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projetos</a>
+            <a href="#certificados">Certificados</a>
+            <a href="#contact">Contato</a>
         </nav>
     </header>
+    
     <section class="home">
         <div class="home-img">
             <a href="curriculo.pdf" download>
@@ -37,6 +39,7 @@
             <a href="https://wa.me/5541998424836?text=Olá,%20estou%20interessado%20em%20seus%20serviços." class="btn" target="_blank">Me contrate</a>
         </div>
     </section>
+    
     <section id="services" class="section">
         <div class="section-content">
             <img src="images/services.jpg" alt="Serviços">
@@ -46,15 +49,41 @@
             </div>
         </div>
     </section>
+    
     <section id="skills" class="section">
         <div class="section-content">
-            <img src="images/skills.jpg" alt="Skills">
             <div class="text-content">
-                <h2>Skills</h2>
-                <p>Habilidades frontend como HTML5, CSS, Javascript e integrações PHP. Backend aplicações em Python.</p>
+                <h2>Linguagens</h2>
             </div>
+            <section class="skills-gallery">
+                <div class="skill-item">
+                    <img src="images/html.png" alt="HTML" class="skill-img">
+                    <div class="skill-overlay">HTML5</div>
+                </div>
+                <div class="skill-item">
+                    <img src="images/css.png" alt="CSS" class="skill-img">
+                    <div class="skill-overlay">CSS3</div>
+                </div>
+                <div class="skill-item">
+                    <img src="images/js.png" alt="JavaScript" class="skill-img">
+                    <div class="skill-overlay">JavaScript</div>
+                </div>
+                <div class="skill-item">
+                    <img src="images/python.png" alt="Python" class="skill-img">
+                    <div class="skill-overlay">Python</div>
+                </div>
+                <div class="skill-item">
+                    <img src="images/mysql.png" alt="MySQL" class="skill-img">
+                    <div class="skill-overlay">MySQL</div>
+                </div>
+                <div class="skill-item">
+                    <img src="images/php.png" alt="PHP" class="skill-img">
+                    <div class="skill-overlay">PHP</div>
+                </div>
+            </section>
         </div>
     </section>
+    
     <section id="projects" class="section">
         <div class="section-content">
             <div class="project-item">
@@ -68,16 +97,43 @@
             </div>
             <div class="project-item">
                 <a href="https://howtojinx.vercel.app" target="_blank">
-                    <img src="images/jinx.jpg" alt="Jinx" class="project-img">
+                    <img src="images/jinx2.jpg" alt="Jinx" class="project-img">
                 </a>
                 <div class="project-description">
                     <h3>Site Jinx</h3>
                     <p>Um Site da Jinx, de League of Legends, que mostra como jogar matchups.</p>
                 </div>
             </div>
-            <!-- atualizar o restante aqui -->
+            <div class="project-item">
+                <a href="https://github.com/alanmilan/slot-machine" target="_blank">
+                    <img src="images/slotmachine.jpg" alt="Slot Machine" class="project-img">
+                </a>
+                <div class="project-description">
+                    <h3>Slot Machine</h3>
+                    <p>Um aplicativo em Python de slot machine.</p>
+                </div>
+            </div>
+            <!-- colocar mais projetos -->
         </div>
     </section>
+    
+    <section id="certificados" class="section">
+        <div class="section-content">
+            <h2>Certificados</h2>
+            <div class="certificates-gallery">
+                <div class="certificate-item">
+                    <img src="images/certificado1.jpg" alt="Certificado em AWS Cloud Practitioner Essentials" class="certificado">
+                    <p>Certificado em AWS Cloud Practitioner Essentials</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificado2.jpg" alt="Certificado em Bootcamp de IA Generativa da AWS" class="certificado">
+                    <p>Certificado em Bootcamp de IA Generativa da AWS</p>
+                </div>
+                <!-- aqui irão mais certificados ao longo do curso -->
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="section">
         <div class="section-content">
             <a href="https://wa.me/5541998424836?text=Olá,%20estou%20interessado%20em%20seus%20serviços." target="_blank">
@@ -93,6 +149,15 @@
     <footer class="footer">
         <p>Desenvolvido por Alan Milan © </p>
     </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Descrição da Imagem">
+        </div>
+    </div>
+    
     <script src="scripts.js"></script>
+
 </body>
 </html>
