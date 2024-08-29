@@ -2,7 +2,7 @@ function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  const phrases = ["software Developer","dev", "fighter", "a Lover"];
+  const phrases = ["software Developer","dev", "Python dev", "FrontEnd dev"];
   const el = document.getElementById("words");
 
   let sleepTime = 100;
@@ -45,3 +45,24 @@ function sleep(ms) {
         });
     });
 });
+
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const closeModal = document.getElementsByClassName("close")[0];
+
+document.querySelectorAll('.certificado').forEach(img => {
+    img.addEventListener('click', function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+    });
+});
+
+closeModal.onclick = function() {
+    modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
