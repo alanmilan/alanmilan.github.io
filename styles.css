@@ -248,7 +248,15 @@ span{
 }
 .skill-overlay{
     position: absolute;
-    top: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo semi-transparente */
+    color: #ffffff; /* Cor do texto */
+    display: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Começa escondido */
+    transition: opacity 0.5s ease; /* Animação suave para a transição */
+    font-size: 1.2rem; /* Tamanho da fonte do texto */
+    font-family: 'Neon 80s';
 }
 
 #skills .section-content {
@@ -447,6 +455,20 @@ html {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.certificate-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #b74b4b;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1;
 }
 
 .modal {
