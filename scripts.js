@@ -1,68 +1,39 @@
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+// Menu Mobile
+const menuToggle = document.getElementById('mobile-menu');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Efeito de Digitação
+const textElement = document.getElementById('words');
+const phrases = ['Software Engineer', 'Web Developer', 'Tech Enthusiast'];
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+        textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 2000); // Espera antes de apagar
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(typeEffect, 500);
+    } else {
+        setTimeout(typeEffect, isDeleting ? 100 : 200);
+    }
 }
 
-const phrases = ["software Developer","dev", "Python dev", "FrontEnd dev"];
-const el = document.getElementById("words");
-
-let sleepTime = 100;
-
-let curPhraseIndex = 0;
-
-const writeLoop = async () => {
-  while (true) {
-    let curWord = phrases[curPhraseIndex];
-
-    for (let i = 0; i < curWord.length; i++) {
-      el.innerText = curWord.substring(0, i + 1);
-      await sleep(sleepTime);
-    }
-
-    await sleep(sleepTime * 10);
-
-    for (let i = curWord.length; i > 0; i--) {
-      el.innerText = curWord.substring(0, i - 1);
-      await sleep(sleepTime);
-    }
-
-    await sleep(sleepTime * 5);
-
-    if (curPhraseIndex === phrases.length - 1) {
-      curPhraseIndex = 0;
-    } else {
-      curPhraseIndex++;
-    }
-  }
-};
-
-writeLoop();
-
-document.querySelectorAll('nav a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
-
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modal-img");
-const closeModal = document.getElementsByClassName("close")[0];
-
-document.querySelectorAll('.certificado').forEach(img => {
-  img.addEventListener('click', function() {
-    modal.style.display = "flex";
-    modalImg.src = this.src;
-  });
-});
-
-closeModal.addEventListener('click', () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
+document.addEventListener('DOMContentLoaded', typeEffect);
