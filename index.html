@@ -4,163 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Neon+80s&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neon+80s&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Alan Portfolio</title>
+    <title>Alan | Portfolio</title>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Alan</a>
-        <nav>
-            <a href="#" class="active">Home</a>
+
+    <div class="background-glow"></div>
+
+    <header class="glass-header">
+        <a href="#" class="logo">Alan<span>.Dev</span></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
             <a href="#services">Serviços</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projetos</a>
             <a href="#certificados">Certificados</a>
-            <a href="#contact">Contato</a>
+            <a href="#contact" class="btn-contact">Contato</a>
         </nav>
     </header>
     
-    <section class="home">
-        <div class="home-img">
-            <a href="curriculo.pdf" download>
-                <img src="images/main.jpg" alt="Main">
-            </a>
-        </div>
-        <div class="home-content">
-            <h1>Olá, meu nome é <span>Alan</span></h1>
-            <h3 class="typing-text">I'm a <span id="words"></span></h3>
-            <p>Profissional em formação na área de Engenharia de Software, especializado em desenvolvimento e inovação tecnológica. Pronto para contribuir com soluções eficazes e estratégias que impulsionem a eficiência e sucesso da sua empresa.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/alan-milan-20a29b301/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/alanmilan" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://instagram.com/alanmilan_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <section id="home" class="home">
+        <div class="container home-container">
+            <div class="home-content">
+                <span class="greeting">Olá, eu sou</span>
+                <h1>Alan Milan</h1>
+                <h3 class="typing-text">I'm a <span id="words">Software Engineer</span><span class="cursor">|</span></h3>
+                <p>Estudante de Engenharia de Software focado em criar soluções digitais seguras e inovadoras. Transformando código em experiência.</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/alan-milan-20a29b301/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/alanmilan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/alanmilan_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+                <div class="home-btns">
+                    <a href="curriculo.pdf" download class="btn btn-outline">Download CV</a>
+                    <a href="#projects" class="btn btn-filled">Ver Projetos</a>
+                </div>
             </div>
-            <a href="https://wa.me/5541998424836?text=Olá,%20estou%20interessado%20em%20seus%20serviços." class="btn" target="_blank">Me contrate</a>
+            
+            <div class="home-img">
+                <div class="img-box">
+                    <img src="images/main.jpg" alt="Alan Milan">
+                </div>
+            </div>
         </div>
     </section>
     
     <section id="services" class="section">
-        <div class="section-content">
-            <img src="images/services.jpg" alt="Serviços">
-            <div class="text-content">
-                <h2>Serviços</h2>
-                <p>Sites responsivos e com layouts estilizados. Backend com aplicações eficientes para o seu trabalho.</p>
+        <div class="container">
+            <h2 class="section-title">O que eu <span>faço</span></h2>
+            <div class="cards-grid">
+                <div class="card glass-card">
+                    <i class="fa-solid fa-code icon"></i>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites modernos, responsivos e otimizados para SEO usando as melhores práticas do mercado.</p>
+                </div>
+                <div class="card glass-card">
+                    <i class="fa-solid fa-server icon"></i>
+                    <h3>Backend & API</h3>
+                    <p>Criação de lógicas de negócio robustas, integração com bancos de dados e APIs seguras.</p>
+                </div>
+                <div class="card glass-card">
+                    <i class="fa-solid fa-mobile-screen icon"></i>
+                    <h3>Responsividade</h3>
+                    <p>Layouts que se adaptam perfeitamente a qualquer tela, do celular ao desktop.</p>
+                </div>
             </div>
         </div>
     </section>
     
     <section id="skills" class="section">
-        <div class="section-content">
-            <div class="text-content">
-                <h2>Linguagens</h2>
-            </div>
-            <div class="skills-gallery">
-                <div class="skill-item">
-                    <img src="images/html.png" alt="HTML" class="skill-img">
-                    <div class="skill-overlay">HTML5</div>
+        <div class="container">
+            <h2 class="section-title">Minhas <span>Skills</span></h2>
+            <div class="skills-wrapper">
+                <div class="skill-box">
+                    <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
+                    <span>HTML5</span>
                 </div>
-                <div class="skill-item">
-                    <img src="images/css.png" alt="CSS" class="skill-img">
-                    <div class="skill-overlay">CSS3</div>
+                <div class="skill-box">
+                    <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
+                    <span>CSS3</span>
                 </div>
-                <div class="skill-item">
-                    <img src="images/js.png" alt="JavaScript" class="skill-img">
-                    <div class="skill-overlay">JavaScript</div>
+                <div class="skill-box">
+                    <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
+                    <span>JavaScript</span>
                 </div>
-                <div class="skill-item">
-                    <img src="images/python.png" alt="Python" class="skill-img">
-                    <div class="skill-overlay">Python</div>
+                <div class="skill-box">
+                    <i class="fa-brands fa-python" style="color: #3776AB;"></i>
+                    <span>Python</span>
                 </div>
-                <div class="skill-item">
-                    <img src="images/mysql.png" alt="MySQL" class="skill-img">
-                    <div class="skill-overlay">MySQL</div>
+                <div class="skill-box">
+                    <i class="fa-solid fa-database" style="color: #00758F;"></i>
+                    <span>MySQL</span>
                 </div>
-                <div class="skill-item">
-                    <img src="images/php.png" alt="PHP" class="skill-img">
-                    <div class="skill-overlay">PHP</div>
+                <div class="skill-box">
+                    <i class="fa-brands fa-php" style="color: #777BB4;"></i>
+                    <span>PHP</span>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="projects" class="section">
-        <div class="section-content">
-            <div class="project-item">
-                <a href="https://github.com/alanmilan/cronometro/" target="_blank">
-                    <img src="images/stopwatch.jpg" alt="Cronômetro" class="project-img">
-                </a>
-                <div class="project-description">
-                    <h3>Cronômetro</h3>
-                    <p>Um cronômetro simples que foi usado nos Debates Eleitorais para prefeitura de cidades, na Band Paraná.</p>
-                </div>
+        <div class="container">
+            <h2 class="section-title">Projetos <span>Recentes</span></h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/stopwatch.jpg" alt="Cronômetro">
+                        <div class="overlay">
+                            <a href="https://github.com/alanmilan/cronometro/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Cronômetro Band</h3>
+                        <p>Utilizado oficialmente nos debates eleitorais da Band Paraná.</p>
+                        <div class="tags">
+                            <span>JS</span><span>CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/slotmachine.jpg" alt="Slot Machine">
+                        <div class="overlay">
+                            <a href="https://github.com/alanmilan/slot-machine" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Slot Machine</h3>
+                        <p>Simulador de caça-níqueis com lógica de probabilidade.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/encryptag.jpg" alt="Encryptag">
+                        <div class="overlay">
+                            <a href="https://encryptag.com.br" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Encryptag Landing</h3>
+                        <p>Página institucional moderna para empresa de segurança.</p>
+                        <div class="tags">
+                            <span>Web</span><span>Design</span>
+                        </div>
+                    </div>
+                </article>
             </div>
-            <div class="project-item">
-                <a href="https://github.com/alanmilan/slot-machine" target="_blank">
-                    <img src="images/slotmachine.jpg" alt="Slot Machine" class="project-img">
-                </a>
-                <div class="project-description">
-                    <h3>Slot Machine</h3>
-                    <p>Um aplicativo em Python de slot machine.</p>
-                </div>
-            </div>
-                <div class="project-item">
-                <a href="https://encryptag.com.br" target="_blank">
-                    <img src="images/encryptag.jpg" alt="Encryptag" class="project-img">
-                </a>
-                <div class="project-description">
-                    <h3>Landing Page da Encryptag</h3>
-                    <p>Um site criado para uma empresa.</p>
-                </div>
-            </div>
-            <!-- colocar mais projetos -->
         </div>
     </section>
     
     <section id="certificados" class="section">
-        <div class="section-content">
-            <h2>Certificados</h2>
-            <div class="certificates-gallery">
-                <div class="certificate-item">
-                    <img src="images/certificado1.jpg" alt="Certificado em AWS Cloud Practitioner Essentials" class="certificado">
-                    <p>Certificado em AWS Cloud Practitioner Essentials</p>
+        <div class="container">
+            <h2 class="section-title">Certificações</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <img src="images/certificado1.jpg" alt="AWS Cloud Practitioner">
+                    <div class="cert-info">
+                        <h4>AWS Cloud Practitioner</h4>
+                        <p>Amazon Web Services</p>
+                    </div>
                 </div>
-                <div class="certificate-item">
-                    <img src="images/certificado2.jpg" alt="Certificado em Bootcamp de IA Generativa da AWS" class="certificado">
-                    <p>Certificado em Bootcamp de IA Generativa da AWS</p>
+                <div class="cert-item">
+                    <img src="images/certificado2.jpg" alt="AWS AI Generativa">
+                    <div class="cert-info">
+                        <h4>IA Generativa Bootcamp</h4>
+                        <p>Amazon Web Services</p>
+                    </div>
                 </div>
-                <!-- aqui irão mais certificados ao longo do curso -->
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="section-content">
-            <a href="https://wa.me/5541998424836?text=Olá,%20estou%20interessado%20em%20seus%20serviços." target="_blank">
-                <img src="images/contact.jpg" alt="Contato">
-            </a>
-            <div class="text-content">
-                <h2>Contato</h2>
-                <p>Clique na imagem e me chame no WhatsApp!</p>
+    <section id="contact" class="section contact-section">
+        <div class="container contact-container">
+            <div class="contact-text">
+                <h2>Vamos trabalhar juntos?</h2>
+                <p>Estou disponível para novos projetos e desafios. Mande um 'oi'!</p>
+                <a href="https://wa.me/5541998424836" target="_blank" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <p>Desenvolvido por Alan Milan ©</p>
+    <footer>
+        <p>Desenvolvido por <span>Alan Milan</span> &copy; 2025</p>
     </footer>
-
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="Descrição da Imagem">
-        </div>
-    </div>
     
     <script src="scripts.js"></script>
-
 </body>
 </html>
-
-
-
